@@ -1,0 +1,5 @@
+{
+  "diff": true,
+  "extension": [ "js", "ts" ],
+  "require": ["ts-node/register"]
+}
