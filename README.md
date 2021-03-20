@@ -1,0 +1,2 @@
+# monorep
+Simple monorepository assistant
