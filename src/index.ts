@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import { packageJson } from './package';
 
 import {
-  registerAddPackageCommand
+  registerAddDependencyCommand
 } from './commands';
 
 (() => {
@@ -12,7 +12,7 @@ import {
 
   program.version(pjson.version || '1.0.0');
 
-  registerAddPackageCommand(program);
+  registerAddDependencyCommand(program);
 
   program.parse(process.argv);
 })();

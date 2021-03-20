@@ -1,1 +1,1 @@
-export * from './add-package';
+export * from './add-dependency';
