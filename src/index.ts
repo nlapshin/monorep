@@ -1,7 +1,6 @@
-import fs from 'fs';
-
 import { Command } from 'commander';
-import { PackageJson } from 'type-fest'
+
+import { packageJson } from './package';
 
 import {
   registerAddPackageCommand
@@ -17,9 +16,3 @@ import {
 
   program.parse(process.argv);
 })();
-
-function packageJson(): PackageJson {
-  return JSON.parse(fs.readFileSync('package.json', 'utf-8'))
-}
-
-
