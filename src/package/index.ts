@@ -5,6 +5,13 @@ import execSh from 'exec-sh';
 
 import { IPackageInfo } from './model';
 
+const packageManager = {
+  npm: {
+    install: 'npm install',
+    uninstall: 'npm uninstall',
+  }
+}
+
 export function packageJson(packageJsonPath = 'package.json'): PackageJson {
   return JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'))
 }
@@ -21,5 +28,9 @@ export function packageInfo(packageJsonPath = 'package.json'): IPackageInfo {
 }
 
 export async function installDependency(packagePath: string, dependency: string): Promise<void> {
-  await execSh.promise(`cd ${packagePath} && ls -l && npm install ${dependency}`);
+  await execSh.promise(`cd ${packagePath} && ls -l && ${packageManager.npm.install} ${dependency}`);
+}
+
+export async function uninstallDependency(packagePath: string, dependency: string): Promise<void> {
+  await execSh.promise(`cd ${packagePath} && ls -l && ${packageManager.npm.uninstall} ${dependency}`);
 }
