@@ -1,7 +1,7 @@
 import commander from "commander";
 
 import { registerScopeOption } from '../../options';
-import { addPackageHandler } from './handler';
+import { addDependencyHandler } from './handler';
 
 export function registerAddDependencyCommand (program: commander.Command): commander.Command {
   const command = program
@@ -10,7 +10,7 @@ export function registerAddDependencyCommand (program: commander.Command): comma
 
   registerScopeOption(command);
 
-  command.action(addPackageHandler);
+  command.action(addDependencyHandler);
 
   return program;
 }

@@ -1,7 +1,7 @@
 import { config } from '../../config';
 import { parseScopeOption } from '../../options'
 
-export function addPackageHandler(dependency: string, options: { scope?: string }): void {
+export function addDependencyHandler(dependency: string, options: { scope?: string }): void {
   const scope = parseScopeOption(options.scope);
   const { packages } = config();
 

@@ -39,5 +39,15 @@ export default {
       "commander": "^7.1.0",
       "type-fest": "^0.8.1"
     }
+  },
+  packageJsonEmpty: {
+    "name": "test-package",
+    "version": "1.0.0",
+    "description": "Test package",
+    "main": "index.js",
+    "private": true,
+    "scripts": {},
+    "devDependencies": {},
+    "dependencies": {}
   }
 }
