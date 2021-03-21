@@ -28,9 +28,9 @@ export function packageInfo(packageJsonPath = 'package.json'): IPackageInfo {
 }
 
 export async function installDependency(packagePath: string, dependency: string): Promise<void> {
-  await execSh.promise(`cd ${packagePath} && ls -l && ${packageManager.npm.install} ${dependency}`);
+  await execSh.promise(`cd ${packagePath} && ${packageManager.npm.install} ${dependency}`);
 }
 
 export async function uninstallDependency(packagePath: string, dependency: string): Promise<void> {
-  await execSh.promise(`cd ${packagePath} && ls -l && ${packageManager.npm.uninstall} ${dependency}`);
+  await execSh.promise(`cd ${packagePath} && ${packageManager.npm.uninstall} ${dependency}`);
 }
