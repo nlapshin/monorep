@@ -2,7 +2,9 @@
   "name": "monorep",
   "version": "1.0.0",
   "description": "Simple monorepository assistant",
-  "main": "index.js",
+  "main": ".build/index.js",
+  "bin": ".build/index.js",
+  "types": ".build/index.d.ts",
   "scripts": {
     "test": "npx mocha ./src/**/*.spec.ts",
     "test:e2e": "npx mocha ./e2e/index.spec.ts",
