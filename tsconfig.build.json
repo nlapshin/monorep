@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "outDir": "./.build"
+  },
+
+  "include": [
+    "src/**/*"
+  ],
+
+  "exclude": [
+    "node_modules",
+    ".build",
+
+    "**/e2e",
+    "**/*.e2e.ts",
+    "**/*.spec.ts",
+    "**/__fixtures/"
+  ]
+}

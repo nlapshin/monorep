@@ -7,7 +7,10 @@
     "test": "npx mocha ./src/**/*.spec.ts",
     "test:e2e": "npx mocha ./e2e/index.spec.ts",
     "lint": "npx eslint . --ext .ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf .build",
+    "compile": "npx tsc -p tsconfig.build.json"
   },
   "husky": {
     "pre-commit": "npm run pre-commit"
