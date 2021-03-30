@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx mocha ./src/**/*.spec.ts",
+    "test:e2e": "npx mocha ./e2e/index.spec.ts",
     "lint": "npx eslint . --ext .ts",
     "prepare": "husky install"
   },

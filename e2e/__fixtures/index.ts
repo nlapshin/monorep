@@ -1,6 +1,6 @@
 export default {
-  packageJson: {
-    "name": "test-package",
+  mainPackageJson: {
+    "name": "main-package",
     "version": "1.0.0",
     "description": "Test package",
     "main": "index.js",
@@ -8,5 +8,8 @@ export default {
     "scripts": {},
     "devDependencies": {},
     "dependencies": {}
+  },
+  monorepConfig: {
+    packages: [ './src/package1/*', './src/package2/*' ]
   }
 }
